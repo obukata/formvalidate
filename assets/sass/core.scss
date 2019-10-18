@@ -1,0 +1,102 @@
+@charset "utf-8"; /*　*/
+/* RESET*/
+@import "lib/yuireset_3.18.1";
+/* PROJECT SET*/
+@import "projectset";
+@import "util/basefix";
+/* LIBRALY*/
+
+
+/** ==================================================*/
+/*	SetBody*/
+/*================================================== *//**/
+html,body {
+	width: 100%;
+	height: auto;
+	color: $black;
+}
+body {
+	font-weight: 500;
+	-webkit-text-size-adjust: 100%;
+	font-feature-settings: 'palt' 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: $black;
+	word-break: break-all;
+	line-height: 2.6;
+	letter-spacing: .25em;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+::selection {
+	background: $black;
+	color: $white;
+}
+
+/** FontSet---------------------------------------- *//**/
+html {
+	@include fontset_html_ja;
+	body { @include fontset_body_ja;}
+}
+html[lang="en"] {
+	@include fontset_html_en;
+	body { @include fontset_body_en;}
+}
+@media (max-width: $InnerMaxWidth_tb) {
+	html {
+		body {
+			font-size: 1.3rem;
+		}
+	}
+}
+@media (max-width: $InnerMaxWidth_sp) {
+	html {
+		body {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+
+/** ==================================================*/
+/*	Z-index*/
+/*	100: base(.page-wrap)*/
+/*		1: lower*/
+/*		50: contents*/
+/*		100: middler*/
+/*		200: upper*/
+/*		300: topper*/
+/*		500 ~ 999: parts*/
+/*	1000: header*/
+/*================================================== *//**/
+
+/** wap*/
+/**------------------------------------------------------------------------------*//**/
+.page-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+@media (max-width: $InnerMaxWidth_tb) {
+	.page-wrap {
+	}
+}
+
+/** ==================================================*/
+/*	Common Layout*/
+/*================================================== *//**/
+
+
+
+/** ==================================================*/
+/*	animation Effects*/
+/*================================================== *//**/
+
+
+/** ==================================================*/
+/*	page include*/
+/*================================================== *//**/
+@import "_pages/index";

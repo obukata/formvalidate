@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Form validate</title>
+<link rel="stylesheet" href="/assets/styles/core.css">
+</head>
+<body>
+
+	<div class="page-wrap">
+		<main class="page-main">
+			<h1>Form validate</h1>
+
+			<form id="js--form" name="myform">
+				Name *<br>
+				<input type="text" placeholder="text">
+				Mail *<br>
+				<input type="mail" placeholder="example@example.com">
+				Sex *<br>
+				<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Male</label>
+				<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Female</label><br>
+				Check *<br>
+				<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type1</label>
+				<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type2</label><br>
+				Text *<br>
+				<textarea name="" id="" cols="30" rows="10"></textarea>
+				<button id="js--form-submit" name="btn" type="submit">Send</button>
+
+			</form>
+		</main>
+	</div>
+
+</body>
+<script src="/assets/scripts/bundle.js"></script>
+</html>
