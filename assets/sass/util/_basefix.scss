@@ -19,7 +19,8 @@ textarea {
 }
 
 input[type="text"],
-input[type="mail"], {
+input[type="mail"],
+input[type="email"] {
 	-webkit-appearance: none;
 	background-color: #fff;
 	background-image: none;
@@ -212,6 +213,19 @@ textarea {
 	box-sizing: border-box;
 	font-size: 1.5rem;
 	color: #606266;
+}
+
+.form-require-icon {
+	color: #ff7777;
+}
+.form-control-feedback {
+	color: $white;
+	background: #ff7777;
+	padding: .5em;
+	font-size: 1.3rem;
+}
+.form-input-wrap {
+	position: relative;
 }
 
 

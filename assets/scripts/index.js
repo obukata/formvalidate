@@ -14,13 +14,16 @@
 	0. libraly Module
 
 ====================================*/
-
+import Vue from 'vue'
+import VeeValidate from 'vee-validate'
+Vue.use(VeeValidate)
 
 /*====================================
 
 	1. event Function
 
 ====================================*/
+
 
 window.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -45,5 +48,12 @@ const Squib = {
 
 
 	formValidate: () => {
+		var validate = new Vue({
+			el: '#app',
+			data: {
+			},
+			methods: {
+			}
+		})
 	}
 }

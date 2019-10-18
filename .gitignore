@@ -23,6 +23,8 @@ config.codekit
 *.map
 .sass-cache
 temp
+core.css
+bundle.js
 
 # Node.jsモジュールのディレクトリは無視
 node_modules

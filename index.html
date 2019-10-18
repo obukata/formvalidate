@@ -7,26 +7,41 @@
 <title>Form validate</title>
 <link rel="stylesheet" href="/assets/styles/core.css">
 </head>
-<body>
-
+<body id="page--index">
 	<div class="page-wrap">
-		<main class="page-main">
+		<main id="app" class="page-main">
 			<h1>Form validate</h1>
 
 			<form id="js--form" name="myform">
-				Name *<br>
-				<input type="text" placeholder="text">
-				Mail *<br>
-				<input type="mail" placeholder="example@example.com">
-				Sex *<br>
-				<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Male</label>
-				<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Female</label><br>
-				Check *<br>
-				<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type1</label>
-				<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type2</label><br>
-				Text *<br>
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-				<button id="js--form-submit" name="btn" type="submit">Send</button>
+				<div class="form-row">
+					Name <span class="form-require-icon">*</span><br>
+					<input type="text" placeholder="Obukata Kensei" class="form-control" v-model="text" name="text" v-validate="'required'" data-vv-as="名前">
+				</div>
+
+				<div class="form-row">
+					Mail <span class="form-require-icon">*</span>　<span class="form-control-feedback" v-show="errors.has('email')">有効なメールアドレスではありません</span><br>
+					<div class="form-input-wrap">
+						<input type="email" placeholder="example@example.com" class="form-control" v-model="email" name="email" v-validate="'required|email'" data-vv-as="メールアドレス">
+					</div>
+				</div>
+
+				<div class="form-row">
+					Sex <span class="form-require-icon">*</span><br>
+					<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Male</label>
+					<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Female</label><br>
+				</div>
+
+				<div class="form-row">
+					Check <span class="form-require-icon">*</span><br>
+					<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type1</label>
+					<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type2</label><br>
+				</div>
+
+				<div class="form-row">
+					Text <span class="form-require-icon">*</span><br>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<button id="js--form-submit" name="btn" type="submit">Send</button>
+				</div>
 
 			</form>
 		</main>
