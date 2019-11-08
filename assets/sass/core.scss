@@ -34,6 +34,10 @@ a {
 	background: $black;
 	color: $white;
 }
+::placeholder {
+	color: $gray;
+}
+
 
 /** FontSet---------------------------------------- *//**/
 html {
@@ -83,6 +87,101 @@ html[lang="en"] {
 @media (max-width: $InnerMaxWidth_tb) {
 	.page-wrap {
 	}
+}
+
+.page-form {
+	width: 600px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3.0rem;
+}
+
+.style--text-link {
+	text-decoration: underline;
+	position: relative;
+	padding-left: 1em;
+	display: inline;
+	line-height: 1.6;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	&::before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-top: .25em solid transparent;
+		border-right: .25em solid transparent;
+		border-bottom: .25em solid transparent;
+		border-left: .4em solid $purple;
+		display: block;
+		position: absolute;
+		top: .6em;
+		left: 0;
+		transition: all $fast;
+	}
+	&:hover {
+		&::before {
+			left: .15em;
+		}
+	}
+	&.disactive {
+		opacity: .7;
+		pointer-events: none;
+		text-decoration: none;
+		&:hover {
+			&::before {
+				left: 0;
+			}
+		}
+	}
+	&.no-icon {
+		display: inline;
+		padding-left: 0;
+		&::before {
+			display: none;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.style--column {
+	display: flex;
+	justify-content: center;
+}
+.style--column-item {
+	margin: 0 8px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+.form-btn {
+	border-radius: 4px;
+	padding: 8px 16px;
+	margin: auto;
+	background: #77b9ff;
+	color: #fff;
+	font-size: 1.3rem;
+	display: block;
+	transition: all 200ms;
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.parsley-errors-list {
+	color: #ff7777;
+	font-size: 1.1rem;
 }
 
 /** ==================================================*/

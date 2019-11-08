@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Form validate</title>
+<link rel="stylesheet" href="/assets/styles/core.css">
+</head>
+<body id="page--index">
+	<div class="page-wrap">
+		<main id="app" class="page-main">
+			<h1>Form validate</h1>
+
+			<div class="page-form">
+				<form id="js--form" name="myform" data-parsley-validate data-parsley-trigger="keyup focusout change input" action="/parsley/complete.html">
+					<div class="form-row">
+						Name <span class="form-require-icon">*</span><br>
+						<input type="text" placeholder="Obukata Kensei" class="form-control" required>
+					</div>
+
+					<div class="form-row">
+						Mail <span class="form-require-icon">*</span>　<!-- <span class="form-control-feedback">有効なメールアドレスではありません</span><br> -->
+						<div class="form-input-wrap">
+							<input type="email" placeholder="example@example.com" class="form-control" required>
+						</div>
+					</div>
+
+					<div class="form-row">
+						Sex<br>
+						<label><input type="radio" name="sex" checked="checked"><span class="check-box"><span class="check-box-icon"></span></span>Male</label>
+						<label><input type="radio" name="sex"><span class="check-box"><span class="check-box-icon"></span></span>Female</label><br>
+					</div>
+
+					<div class="form-row">
+						Check<br>
+						<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type1</label>
+						<label><input type="checkbox" name="check"><span class="check-box"><span class="check-box-icon"></span></span>Type2</label><br>
+					</div>
+
+					<div class="form-row">
+						Text <span class="form-require-icon">*</span><br>
+						<textarea name="" id="" cols="30" rows="10" required></textarea>
+					</div>
+
+					<div class="form-row">
+						<button class="form-btn" id="js--form-submit" name="btn" type="submit">Send</button>
+					</div>
+				</form>
+
+			</div>
+		</main>
+	</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/assets/scripts/modules/parsleyjs/parsley.min.js"></script>
+<script src="/assets/scripts/modules/parsleyjs/i18n/ja.js"></script>
+<script src="/assets/scripts/bundle.js"></script>
+</html>
